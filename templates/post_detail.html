@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="post-entry">
+	<!--blog_detail name is specified explicitly in views.py
+	 using context_object_name attribute of class based view.
+	 Django's default name for objects of our model is 'object'
+	 or the object name i.e 'post'. -->
+	<h2>{{ blog_detail.title }}</h2>
+	<p>{{ blog_detail.body }}</p>
+</div>
+{% endblock content %}
